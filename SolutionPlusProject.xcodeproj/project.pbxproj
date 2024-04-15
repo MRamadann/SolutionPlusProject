@@ -13,6 +13,16 @@
 		189C342C2BC3878800123C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189C342A2BC3878800123C84 /* Main.storyboard */; };
 		189C342E2BC3878A00123C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189C342D2BC3878A00123C84 /* Assets.xcassets */; };
 		189C34312BC3878A00123C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189C342F2BC3878A00123C84 /* LaunchScreen.storyboard */; };
+		189C34402BC38A3100123C84 /* MyUIUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 189C343F2BC38A3100123C84 /* MyUIUtilities */; };
+		189C34422BC39F4700123C84 /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34412BC39F4700123C84 /* LoginEndpoint.swift */; };
+		189C34452BC3A01C00123C84 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34442BC3A01C00123C84 /* LoginRequest.swift */; };
+		189C34472BC3A02B00123C84 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34462BC3A02B00123C84 /* LoginResponse.swift */; };
+		189C344A2BC841CE00123C84 /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34492BC841CE00123C84 /* ProductsEndpoint.swift */; };
+		189C344C2BC8430900123C84 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C344B2BC8430900123C84 /* ProductModel.swift */; };
+		189C34532BCC519800123C84 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189C34512BCC519800123C84 /* DataModel.xcdatamodeld */; };
+		189C34592BCC55B200123C84 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34582BCC55B200123C84 /* CoreDataStack.swift */; };
+		189C34672BCCA3C900123C84 /* ReusableTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189C34662BCCA3C900123C84 /* ReusableTextField.xib */; };
+		189C346B2BCCA62000123C84 /* ReusableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C346A2BCCA62000123C84 /* ReusableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		189C342D2BC3878A00123C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189C34302BC3878A00123C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		189C34322BC3878A00123C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189C343D2BC3898A00123C84 /* MyUIUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyUIUtilities; path = ../MyUIUtilities; sourceTree = "<group>"; };
+		189C34412BC39F4700123C84 /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		189C34442BC3A01C00123C84 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		189C34462BC3A02B00123C84 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		189C34492BC841CE00123C84 /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
+		189C344B2BC8430900123C84 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		189C34522BCC519800123C84 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		189C34582BCC55B200123C84 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		189C34662BCCA3C900123C84 /* ReusableTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableTextField.xib; sourceTree = "<group>"; };
+		189C346A2BCCA62000123C84 /* ReusableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189C34402BC38A3100123C84 /* MyUIUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +63,7 @@
 			children = (
 				189C34232BC3878800123C84 /* SolutionPlusProject */,
 				189C34222BC3878800123C84 /* Products */,
+				189C343E2BC38A3100123C84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,57 @@
 		189C34232BC3878800123C84 /* SolutionPlusProject */ = {
 			isa = PBXGroup;
 			children = (
+				189C34482BC3A18800123C84 /* Endpoints */,
+				189C34432BC3A00100123C84 /* Models */,
 				189C34242BC3878800123C84 /* AppDelegate.swift */,
 				189C34262BC3878800123C84 /* SceneDelegate.swift */,
 				189C34282BC3878800123C84 /* ViewController.swift */,
+				189C34662BCCA3C900123C84 /* ReusableTextField.xib */,
+				189C346A2BCCA62000123C84 /* ReusableTextField.swift */,
+				189C34582BCC55B200123C84 /* CoreDataStack.swift */,
 				189C342A2BC3878800123C84 /* Main.storyboard */,
 				189C342D2BC3878A00123C84 /* Assets.xcassets */,
 				189C342F2BC3878A00123C84 /* LaunchScreen.storyboard */,
 				189C34322BC3878A00123C84 /* Info.plist */,
+				189C34512BCC519800123C84 /* DataModel.xcdatamodeld */,
+				189C343C2BC3898A00123C84 /* Packages */,
 			);
 			path = SolutionPlusProject;
+			sourceTree = "<group>";
+		};
+		189C343C2BC3898A00123C84 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				189C343D2BC3898A00123C84 /* MyUIUtilities */,
+			);
+			name = Packages;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		189C343E2BC38A3100123C84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		189C34432BC3A00100123C84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				189C34442BC3A01C00123C84 /* LoginRequest.swift */,
+				189C34462BC3A02B00123C84 /* LoginResponse.swift */,
+				189C344B2BC8430900123C84 /* ProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		189C34482BC3A18800123C84 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				189C34412BC39F4700123C84 /* LoginEndpoint.swift */,
+				189C34492BC841CE00123C84 /* ProductsEndpoint.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +147,9 @@
 			dependencies = (
 			);
 			name = SolutionPlusProject;
+			packageProductDependencies = (
+				189C343F2BC38A3100123C84 /* MyUIUtilities */,
+			);
 			productName = SolutionPlusProject;
 			productReference = 189C34212BC3878800123C84 /* SolutionPlusProject.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +194,7 @@
 			files = (
 				189C34312BC3878A00123C84 /* LaunchScreen.storyboard in Resources */,
 				189C342E2BC3878A00123C84 /* Assets.xcassets in Resources */,
+				189C34672BCCA3C900123C84 /* ReusableTextField.xib in Resources */,
 				189C342C2BC3878800123C84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189C34422BC39F4700123C84 /* LoginEndpoint.swift in Sources */,
+				189C344C2BC8430900123C84 /* ProductModel.swift in Sources */,
 				189C34292BC3878800123C84 /* ViewController.swift in Sources */,
+				189C34592BCC55B200123C84 /* CoreDataStack.swift in Sources */,
+				189C344A2BC841CE00123C84 /* ProductsEndpoint.swift in Sources */,
+				189C34472BC3A02B00123C84 /* LoginResponse.swift in Sources */,
 				189C34252BC3878800123C84 /* AppDelegate.swift in Sources */,
+				189C34532BCC519800123C84 /* DataModel.xcdatamodeld in Sources */,
+				189C34452BC3A01C00123C84 /* LoginRequest.swift in Sources */,
+				189C346B2BCCA62000123C84 /* ReusableTextField.swift in Sources */,
 				189C34272BC3878800123C84 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +432,26 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		189C343F2BC38A3100123C84 /* MyUIUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyUIUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		189C34512BCC519800123C84 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				189C34522BCC519800123C84 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 189C34522BCC519800123C84 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 189C34192BC3878800123C84 /* Project object */;
 }

@@ -16,13 +16,13 @@ extension loginEndpoint : Endpoint {
     var baseURL: URL {
         switch self {
         case .loginRequest:
-            return URL(string: "https://dummyjson.com/auth")!
+            return URL(string: "https://dummyjson.com")!
         }
     }
     var path: String {
         switch self {
         case .loginRequest:
-            return "https://dummyjson.com/auth/login"
+            return "/auth/login"
         }
     }
     var method: HTTPMethod {
