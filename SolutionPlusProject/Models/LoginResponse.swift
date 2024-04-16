@@ -7,10 +7,10 @@
 import Foundation
 
 struct LoginResponse: Codable {
-    let token: String
-    let id: Int
-    let username, email, firstName, lastName: String
-    let gender: String
-    let image: String
+    let token: String?
+    let id: Int?
+    let username, email, firstName, lastName: String?
+    let gender: String?
+    let image: String?
     
 }
