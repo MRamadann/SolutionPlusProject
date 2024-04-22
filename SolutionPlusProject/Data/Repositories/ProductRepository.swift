@@ -8,11 +8,6 @@
 import Foundation
 import Combine
 
-protocol ProductRepositoryProtocol {
-    func getProducts(endpoint: ProductEndpoint) -> AnyPublisher<ProductAPIResponse, Error>
-    func saveProductsToCoreData(_ products: ProductAPIResponse)
-    func fetchProductsFromCoreData() -> AnyPublisher<[ProductsData], Error>
-}
 class ProductRepository: ProductRepositoryProtocol {
     private let remoteRepository: RemoteProductRepositoryProtocol = RemoteProductRepository()
     private let localRepository: LocalProductRepositoryProrocol = LocalProductRepository()

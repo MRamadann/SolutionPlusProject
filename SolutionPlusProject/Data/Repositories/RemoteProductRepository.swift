@@ -9,9 +9,6 @@ import Foundation
 import Combine
 import MyUIUtilities
 
-protocol RemoteProductRepositoryProtocol {
-    func fetchRemoteProducts(endpoint: ProductEndpoint) -> AnyPublisher<ProductAPIResponse, Error>
-}
 class RemoteProductRepository: RemoteProductRepositoryProtocol {
     var apiClient = URLSessionAPIClient<ProductEndpoint>()
     private var cancellables = Set<AnyCancellable>()

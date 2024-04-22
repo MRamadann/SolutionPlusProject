@@ -10,10 +10,6 @@ import Combine
 import CoreData
 import MyUIUtilities
 
-protocol FetchProductsUseCaseProtocol {
-    func fetchRemoteProducts()
-    func fetchProductsFromCoreData()
-}
 class FetchProductsUseCase: FetchProductsUseCaseProtocol {
     var cancellables = Set<AnyCancellable>()
     private let productRepository: ProductRepositoryProtocol = ProductRepository()
