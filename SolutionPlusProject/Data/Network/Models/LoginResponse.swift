@@ -12,5 +12,4 @@ struct LoginResponse: Codable {
     let username, email, firstName, lastName: String?
     let gender: String?
     let image: String?
-    
 }

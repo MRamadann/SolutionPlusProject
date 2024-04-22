@@ -10,6 +10,4 @@ import MyUIUtilities
 
 class ReusableTextField: NibLoadingView {
 
-
-
 }

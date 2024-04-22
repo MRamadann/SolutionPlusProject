@@ -13,25 +13,16 @@ protocol ProductRepositoryProtocol {
     func saveProductsToCoreData(_ products: ProductAPIResponse)
     func fetchProductsFromCoreData() -> AnyPublisher<[ProductsData], Error>
 }
-
 class ProductRepository: ProductRepositoryProtocol {
-    private let remoteRepository: RemoteProductRepository
-    private let localRepository: LocalProductRepository
-    
-    init(remoteRepository: RemoteProductRepository, localRepository: LocalProductRepository) {
-        self.remoteRepository = remoteRepository
-        self.localRepository = localRepository
-    }
-    
+    private let remoteRepository: RemoteProductRepositoryProtocol = RemoteProductRepository()
+    private let localRepository: LocalProductRepositoryProrocol = LocalProductRepository()
     func saveProductsToCoreData(_ products: ProductAPIResponse) {
         localRepository.saveProductsToCoreData(products)
     }
-    
     func fetchProductsFromCoreData() -> AnyPublisher<[ProductsData], Error> {
         localRepository.fetchProductsFromCoreData()
     }
-    
     func getProducts(endpoint: ProductEndpoint) -> AnyPublisher<ProductAPIResponse, Error> {
-       return remoteRepository.fetchRemoteProducts(endpoint: endpoint)
+        return remoteRepository.fetchRemoteProducts(endpoint: endpoint)
     }
 }

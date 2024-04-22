@@ -89,13 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				189C346C2BCD3CD900123C84 /* Core */,
-				189C34482BC3A18800123C84 /* Endpoints */,
-				189C34432BC3A00100123C84 /* Models */,
-				189C346D2BCD5A3000123C84 /* Repositories */,
-				189C34762BCD5D9F00123C84 /* UseCases */,
-				189C34772BCD5DE900123C84 /* ViewModels */,
-				189C347C2BCD5E3E00123C84 /* Views */,
-				189C34582BCC55B200123C84 /* CoreDataStack.swift */,
+				18DDEB352BD6B039003BF0DB /* Data */,
+				18DDEB362BD6B03F003BF0DB /* Domain */,
+				18DDEB372BD6B045003BF0DB /* Presentation */,
 				189C346A2BCCA62000123C84 /* ReusableTextField.swift */,
 				189C34662BCCA3C900123C84 /* ReusableTextField.xib */,
 				189C342A2BC3878800123C84 /* Main.storyboard */,
@@ -186,6 +182,50 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		18DDEB352BD6B039003BF0DB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				18DDEB382BD6B10D003BF0DB /* Network */,
+				189C346D2BCD5A3000123C84 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		18DDEB362BD6B03F003BF0DB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				189C34762BCD5D9F00123C84 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		18DDEB372BD6B045003BF0DB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				189C34772BCD5DE900123C84 /* ViewModels */,
+				189C347C2BCD5E3E00123C84 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		18DDEB382BD6B10D003BF0DB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				189C34432BC3A00100123C84 /* Models */,
+				189C34482BC3A18800123C84 /* Endpoints */,
+				18DDEB392BD6B119003BF0DB /* CoreData */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		18DDEB392BD6B119003BF0DB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				189C34582BCC55B200123C84 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +236,7 @@
 				189C341D2BC3878800123C84 /* Sources */,
 				189C341E2BC3878800123C84 /* Frameworks */,
 				189C341F2BC3878800123C84 /* Resources */,
+				18DDEB342BD40127003BF0DB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -233,6 +274,8 @@
 				Base,
 			);
 			mainGroup = 189C34182BC3878800123C84;
+			packageReferences = (
+			);
 			productRefGroup = 189C34222BC3878800123C84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,6 +298,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18DDEB342BD40127003BF0DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		189C341D2BC3878800123C84 /* Sources */ = {

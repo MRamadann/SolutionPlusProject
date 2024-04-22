@@ -8,9 +8,8 @@
 import CoreData
 import Combine
 
-class CoreDataStack {
+public class CoreDataStack {
     static let shared = CoreDataStack()
-    
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "DataModel")
         container.loadPersistentStores { (storeDescription, error) in
@@ -23,17 +22,14 @@ class CoreDataStack {
     var managedObjcontext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-    private init() {}
-    
+    init() {}
     func saveProductsToCoreData(_ products: ProductAPIResponse) {
         // Iterate over each product and insert it into Core Data
         for product in products.products {
             let productEntity = ProductsData(context: managedObjcontext)
-            productEntity.price = product.price ?? 1
             productEntity.category = product.category
             productEntity.id = Int16(product.id!)
             productEntity.title = product.title
-            
             // Save changes to Core Data
             do {
                 try managedObjcontext.save()
@@ -42,8 +38,7 @@ class CoreDataStack {
             }
         }
     }
-    
-    func fetchProductsFromCoreData() -> AnyPublisher<[ProductsData], Error>{
+    func fetchProductsFromCoreData() -> AnyPublisher<[ProductsData], Error> {
         let fetchRequest: NSFetchRequest<ProductsData> = ProductsData.fetchRequest()
         return Future<[ProductsData], Error> { promise in
             do {

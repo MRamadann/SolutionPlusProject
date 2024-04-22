@@ -10,5 +10,4 @@ import Foundation
 struct LoginRequest: Codable {
     let userName: String?
     let password: String?
-    
 }
