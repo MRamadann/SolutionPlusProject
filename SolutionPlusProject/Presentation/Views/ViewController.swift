@@ -11,11 +11,10 @@ import CoreData
 
 class ViewController: UIViewController {
     // Declare a property for the view model
-    var viewModel: ProductListViewModel!
+    var viewModel = ProductListViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = ProductListViewModel()
-        // Fetch products
         viewModel.fetchProducts()
     }
 }

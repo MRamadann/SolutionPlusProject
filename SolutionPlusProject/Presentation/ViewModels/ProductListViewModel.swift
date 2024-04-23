@@ -8,14 +8,5 @@
 import Foundation
 import Combine
 
-class ProductListViewModel {
-    private var fetchProductsUseCase: FetchProductsUseCaseProtocol = FetchProductsUseCase()
-//    @Published var cachedProducts: [ProductsData]?
-//    @Published var errorMessage: String?
-//    private var cancellables = Set<AnyCancellable>()
-
-    func fetchProducts() {
-        fetchProductsUseCase.fetchProductsFromCoreData()
-        fetchProductsUseCase.fetchRemoteProducts()
-    }
+class ProductListViewModel: BaseProductListViewModel {
 }

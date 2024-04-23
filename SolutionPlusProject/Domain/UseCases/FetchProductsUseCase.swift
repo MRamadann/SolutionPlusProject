@@ -10,10 +10,8 @@ import Combine
 import CoreData
 import MyUIUtilities
 
-class FetchProductsUseCase: FetchProductsUseCaseProtocol {
-    var cancellables = Set<AnyCancellable>()
-    private let productRepository: ProductRepositoryProtocol = ProductRepository()
-    func fetchRemoteProducts() {
+class FetchProductsUseCase: BaseFetchProductsUseCase {
+    override func fetchRemoteProducts() {
         let fetchProductsEndpoint = ProductEndpoint.getProducts
         productRepository.getProducts(endpoint: fetchProductsEndpoint)
             .sink( receiveCompletion: { completion in
@@ -30,10 +28,11 @@ class FetchProductsUseCase: FetchProductsUseCaseProtocol {
             )
             .cancel()
     }
-    func fetchProductsFromCoreData() {
+
+    override func fetchProductsFromCoreData() {
         productRepository.fetchProductsFromCoreData()
-            .sink { comletion in
-                switch comletion {
+            .sink { completion in
+                switch completion {
                 case .finished:
                     break
                 case .failure(let error):
