@@ -9,5 +9,4 @@ import Foundation
 import Combine
 
 class ProductRepository: BaseProductRepository {
-    
 }
