@@ -9,9 +9,13 @@ import Foundation
 import Combine
 
 class ProductListViewModel: BaseViewModel {
+    public var fetchProductsUseCase: BaseFetchProductsUseCase = FetchProductsUseCase()
+    func setFetchProductsUseCase(_ useCase: BaseFetchProductsUseCase) {
+        fetchProductsUseCase = useCase
+    }
     func startSynching() {
     }
-    private var fetchProductsUseCase = FetchProductsUseCase()
+
     func fetchProducts() {
         fetchProductsUseCase.fetchProductsFromCoreData()
         fetchProductsUseCase.fetchRemoteProducts()

@@ -10,6 +10,10 @@
 		183364182BDFE215007C4BE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183364172BDFE215007C4BE0 /* GoogleService-Info.plist */; };
 		1833641B2BDFE289007C4BE0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1833641A2BDFE289007C4BE0 /* FirebaseAnalytics */; };
 		1833641D2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1833641C2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		183364232BE231E9007C4BE0 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 183364222BE231E9007C4BE0 /* products.json */; };
+		183364252BE250E4007C4BE0 /* ProductRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183364242BE250E4007C4BE0 /* ProductRepoTest.swift */; };
+		183364272BE251C5007C4BE0 /* MockFetchProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183364262BE251C5007C4BE0 /* MockFetchProductsUseCase.swift */; };
+		183364292BE251F8007C4BE0 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183364282BE251F8007C4BE0 /* ViewModelTests.swift */; };
 		189C34252BC3878800123C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34242BC3878800123C84 /* AppDelegate.swift */; };
 		189C34272BC3878800123C84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34262BC3878800123C84 /* SceneDelegate.swift */; };
 		189C34292BC3878800123C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34282BC3878800123C84 /* ViewController.swift */; };
@@ -44,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		183364172BDFE215007C4BE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		183364222BE231E9007C4BE0 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		183364242BE250E4007C4BE0 /* ProductRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepoTest.swift; sourceTree = "<group>"; };
+		183364262BE251C5007C4BE0 /* MockFetchProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchProductsUseCase.swift; sourceTree = "<group>"; };
+		183364282BE251F8007C4BE0 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		189C34212BC3878800123C84 /* SolutionPlusProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolutionPlusProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189C34242BC3878800123C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189C34262BC3878800123C84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +100,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1833641F2BE230E2007C4BE0 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				183364222BE231E9007C4BE0 /* products.json */,
+				183364242BE250E4007C4BE0 /* ProductRepoTest.swift */,
+				183364262BE251C5007C4BE0 /* MockFetchProductsUseCase.swift */,
+				183364282BE251F8007C4BE0 /* ViewModelTests.swift */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		189C34182BC3878800123C84 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 		189C34232BC3878800123C84 /* SolutionPlusProject */ = {
 			isa = PBXGroup;
 			children = (
+				1833641F2BE230E2007C4BE0 /* test */,
 				18DDEB432BD811CA003BF0DB /* Container */,
 				189C346C2BCD3CD900123C84 /* Core */,
 				18DDEB352BD6B039003BF0DB /* Data */,
@@ -356,6 +376,7 @@
 				189C34312BC3878A00123C84 /* LaunchScreen.storyboard in Resources */,
 				189C342E2BC3878A00123C84 /* Assets.xcassets in Resources */,
 				189C34672BCCA3C900123C84 /* ReusableTextField.xib in Resources */,
+				183364232BE231E9007C4BE0 /* products.json in Resources */,
 				183364182BDFE215007C4BE0 /* GoogleService-Info.plist in Resources */,
 				189C342C2BC3878800123C84 /* Main.storyboard in Resources */,
 			);
@@ -424,6 +445,7 @@
 				18DDEB4A2BD81674003BF0DB /* ProductDependanciesFactory.swift in Sources */,
 				189C34252BC3878800123C84 /* AppDelegate.swift in Sources */,
 				18DDEB3E2BD6C9AE003BF0DB /* FetchProductsUseCaseProtocol.swift in Sources */,
+				183364292BE251F8007C4BE0 /* ViewModelTests.swift in Sources */,
 				189C34532BCC519800123C84 /* DataModel.xcdatamodeld in Sources */,
 				189C34452BC3A01C00123C84 /* LoginRequest.swift in Sources */,
 				189C346B2BCCA62000123C84 /* ReusableTextField.swift in Sources */,
@@ -433,6 +455,8 @@
 				189C347B2BCD5E2A00123C84 /* ProductListViewModel.swift in Sources */,
 				189C34752BCD5A9400123C84 /* ProductRepository.swift in Sources */,
 				18DDEB4C2BD83659003BF0DB /* BaseUsecase.swift in Sources */,
+				183364252BE250E4007C4BE0 /* ProductRepoTest.swift in Sources */,
+				183364272BE251C5007C4BE0 /* MockFetchProductsUseCase.swift in Sources */,
 				18DDEB422BD6CA3E003BF0DB /* LocalProductRepositoryProrocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
