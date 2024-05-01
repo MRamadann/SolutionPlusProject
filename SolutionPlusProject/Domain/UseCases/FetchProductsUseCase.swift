@@ -30,6 +30,7 @@ class FetchProductsUseCase: BaseFetchProductsUseCase {
     }
 
     override func fetchProductsFromCoreData() {
+        assert(Thread.isMainThread, "fetchProductsFromCoreData must be called on the main thread.")
         productRepository.fetchProductsFromCoreData()
             .sink { completion in
                 switch completion {
@@ -39,7 +40,7 @@ class FetchProductsUseCase: BaseFetchProductsUseCase {
                     print(error)
                 }
             } receiveValue: { productsData in
-                print("Start2 \(productsData) End2")
+                print("Start2 \(productsData.count) End2")
             }
             .store(in: &cancellables)
     }

@@ -8,15 +8,10 @@
 import Foundation
 import Combine
 
-class BaseProductListViewModel {
-    private var fetchProductsUseCase = FetchProductsUseCase()
-
-//    init(fetchProductsUseCase: FetchProductsUseCaseProtocol) {
-//        self.fetchProductsUseCase = fetchProductsUseCase
-//    }
-
-    func fetchProducts() {
-        fetchProductsUseCase.fetchProductsFromCoreData()
-        fetchProductsUseCase.fetchRemoteProducts()
-    }
+protocol BaseViewModel {
+  func startSynching()
+}
+enum ChangeBaseVm {
+    case update
+    case error(error: String)
 }

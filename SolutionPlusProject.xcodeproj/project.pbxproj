@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183364182BDFE215007C4BE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183364172BDFE215007C4BE0 /* GoogleService-Info.plist */; };
+		1833641B2BDFE289007C4BE0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1833641A2BDFE289007C4BE0 /* FirebaseAnalytics */; };
+		1833641D2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1833641C2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		189C34252BC3878800123C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34242BC3878800123C84 /* AppDelegate.swift */; };
 		189C34272BC3878800123C84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34262BC3878800123C84 /* SceneDelegate.swift */; };
 		189C34292BC3878800123C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C34282BC3878800123C84 /* ViewController.swift */; };
@@ -35,10 +38,12 @@
 		18DDEB4A2BD81674003BF0DB /* ProductDependanciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDEB492BD81674003BF0DB /* ProductDependanciesFactory.swift */; };
 		18DDEB4C2BD83659003BF0DB /* BaseUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDEB4B2BD83659003BF0DB /* BaseUsecase.swift */; };
 		18DDEB4E2BD83ABD003BF0DB /* BaseViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDEB4D2BD83ABD003BF0DB /* BaseViewmodel.swift */; };
-		18DDEB502BD83D00003BF0DB /* BaseProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDEB4F2BD83D00003BF0DB /* BaseProductRepository.swift */; };
+		18DDEB532BDD4FAE003BF0DB /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 18DDEB522BDD4FAE003BF0DB /* Factory */; };
+		18DDEB552BDE1A87003BF0DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDEB542BDE1A87003BF0DB /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183364172BDFE215007C4BE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		189C34212BC3878800123C84 /* SolutionPlusProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolutionPlusProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189C34242BC3878800123C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189C34262BC3878800123C84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +74,7 @@
 		18DDEB492BD81674003BF0DB /* ProductDependanciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDependanciesFactory.swift; sourceTree = "<group>"; };
 		18DDEB4B2BD83659003BF0DB /* BaseUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUsecase.swift; sourceTree = "<group>"; };
 		18DDEB4D2BD83ABD003BF0DB /* BaseViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewmodel.swift; sourceTree = "<group>"; };
-		18DDEB4F2BD83D00003BF0DB /* BaseProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProductRepository.swift; sourceTree = "<group>"; };
+		18DDEB542BDE1A87003BF0DB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				189C34402BC38A3100123C84 /* MyUIUtilities in Frameworks */,
+				18DDEB532BDD4FAE003BF0DB /* Factory in Frameworks */,
+				1833641B2BDFE289007C4BE0 /* FirebaseAnalytics in Frameworks */,
+				1833641D2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,7 @@
 				189C342A2BC3878800123C84 /* Main.storyboard */,
 				189C342D2BC3878A00123C84 /* Assets.xcassets */,
 				189C342F2BC3878A00123C84 /* LaunchScreen.storyboard */,
+				183364172BDFE215007C4BE0 /* GoogleService-Info.plist */,
 				189C34322BC3878A00123C84 /* Info.plist */,
 				189C34512BCC519800123C84 /* DataModel.xcdatamodeld */,
 				189C343C2BC3898A00123C84 /* Packages */,
@@ -171,7 +180,6 @@
 				189C34702BCD5A7400123C84 /* RemoteProductRepository.swift */,
 				189C34722BCD5A8400123C84 /* LocalProductRepository.swift */,
 				189C34742BCD5A9400123C84 /* ProductRepository.swift */,
-				18DDEB4F2BD83D00003BF0DB /* BaseProductRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				189C34282BC3878800123C84 /* ViewController.swift */,
+				18DDEB542BDE1A87003BF0DB /* BaseViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 				189C341E2BC3878800123C84 /* Frameworks */,
 				189C341F2BC3878800123C84 /* Resources */,
 				18DDEB342BD40127003BF0DB /* ShellScript */,
+				1833641E2BDFFD6F007C4BE0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -293,6 +303,9 @@
 			name = SolutionPlusProject;
 			packageProductDependencies = (
 				189C343F2BC38A3100123C84 /* MyUIUtilities */,
+				18DDEB522BDD4FAE003BF0DB /* Factory */,
+				1833641A2BDFE289007C4BE0 /* FirebaseAnalytics */,
+				1833641C2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = SolutionPlusProject;
 			productReference = 189C34212BC3878800123C84 /* SolutionPlusProject.app */;
@@ -323,6 +336,8 @@
 			);
 			mainGroup = 189C34182BC3878800123C84;
 			packageReferences = (
+				18DDEB512BDD4FAE003BF0DB /* XCRemoteSwiftPackageReference "Factory" */,
+				183364192BDFE289007C4BE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 189C34222BC3878800123C84 /* Products */;
 			projectDirPath = "";
@@ -341,6 +356,7 @@
 				189C34312BC3878A00123C84 /* LaunchScreen.storyboard in Resources */,
 				189C342E2BC3878A00123C84 /* Assets.xcassets in Resources */,
 				189C34672BCCA3C900123C84 /* ReusableTextField.xib in Resources */,
+				183364182BDFE215007C4BE0 /* GoogleService-Info.plist in Resources */,
 				189C342C2BC3878800123C84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +364,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1833641E2BDFFD6F007C4BE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 		18DDEB342BD40127003BF0DB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,7 +420,6 @@
 				189C34712BCD5A7400123C84 /* RemoteProductRepository.swift in Sources */,
 				189C344A2BC841CE00123C84 /* ProductsEndpoint.swift in Sources */,
 				18DDEB3C2BD6C958003BF0DB /* ProductRepositoryProtocol.swift in Sources */,
-				18DDEB502BD83D00003BF0DB /* BaseProductRepository.swift in Sources */,
 				189C34472BC3A02B00123C84 /* LoginResponse.swift in Sources */,
 				18DDEB4A2BD81674003BF0DB /* ProductDependanciesFactory.swift in Sources */,
 				189C34252BC3878800123C84 /* AppDelegate.swift in Sources */,
@@ -392,6 +429,7 @@
 				189C346B2BCCA62000123C84 /* ReusableTextField.swift in Sources */,
 				189C34792BCD5E1500123C84 /* FetchProductsUseCase.swift in Sources */,
 				189C34272BC3878800123C84 /* SceneDelegate.swift in Sources */,
+				18DDEB552BDE1A87003BF0DB /* BaseViewController.swift in Sources */,
 				189C347B2BCD5E2A00123C84 /* ProductListViewModel.swift in Sources */,
 				189C34752BCD5A9400123C84 /* ProductRepository.swift in Sources */,
 				18DDEB4C2BD83659003BF0DB /* BaseUsecase.swift in Sources */,
@@ -612,10 +650,44 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		183364192BDFE289007C4BE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		18DDEB512BDD4FAE003BF0DB /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		1833641A2BDFE289007C4BE0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 183364192BDFE289007C4BE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		1833641C2BDFE289007C4BE0 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 183364192BDFE289007C4BE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
 		189C343F2BC38A3100123C84 /* MyUIUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MyUIUtilities;
+		};
+		18DDEB522BDD4FAE003BF0DB /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18DDEB512BDD4FAE003BF0DB /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
 

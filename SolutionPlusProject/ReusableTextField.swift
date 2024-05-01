@@ -8,6 +8,7 @@
 import UIKit
 import MyUIUtilities
 
-class ReusableTextField: NibLoadingView {
-
-}
+//@IBDesignable
+//class ReusableTextField: NibLoadingView {
+//    @IBOutlet weak var TextField: UITextField!
+//}
