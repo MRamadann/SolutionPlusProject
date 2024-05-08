@@ -15,9 +15,9 @@ class ProductListViewModel: BaseViewModel {
     }
     func startSynching() {
     }
-
     func fetchProducts() {
         fetchProductsUseCase.fetchProductsFromCoreData()
         fetchProductsUseCase.fetchRemoteProducts()
     }
 }
+

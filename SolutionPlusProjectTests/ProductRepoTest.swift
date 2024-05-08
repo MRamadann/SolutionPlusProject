@@ -7,6 +7,7 @@
 
 import XCTest
 import Combine
+@testable import SolutionPlusProject
 
 class ProductRepositoryTests: XCTestCase {
     var repository: ProductRepository!
